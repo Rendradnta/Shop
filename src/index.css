@@ -3,29 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-  /* Aturan ini tidak menggunakan @apply, jadi biarkan apa adanya */
   html {
     scroll-behavior: smooth;
   }
-  
-  /* Bungkus aturan ini dengan '@reference base' karena
-    Anda menggunakan @apply untuk utilitas dari 'base' 
+  /* Aturan 'body' dihapus dari sini.
+    Aturan tersebut sekarang ada di index.html.
+    Ini memperbaiki error 'bg-slate-950'.
   */
-  @reference base {
-    body {
-      @apply bg-slate-950 text-gray-100 font-body;
-    }
-  }
 }
 
 @layer utilities {
-  /* Hapus definisi .font-heading dan .font-body dari sini.
-    Anda sudah mendefinisikannya dengan benar di tailwind.config.js,
-    sehingga menyebabkannya redundan dan berpotensi menimbulkan konflik.
+  /* Aturan '.font-heading' dan '.font-body' dihapus.
+    Aturan tersebut sudah ditangani oleh tailwind.config.js.
   */
 
-  /* Bungkus .glass dengan '@reference utilities' karena
-    Anda menggunakan @apply untuk utilitas dari 'utilities'
+  /* Gunakan '@reference utilities' seperti yang disarankan log error
+    agar @apply dapat menggunakan utility lain (seperti backdrop-blur, dll.)
   */
   @reference utilities {
     .glass {
