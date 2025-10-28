@@ -2,23 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* V V V V V V V V V V V V V V V V V V V V V V V V V
-  KUNCI PERBAIKANNYA ADA DI BARIS DI BAWAH INI
-  V V V V V V V V V V V V V V V V V V V V V V V V V
-*/
-@import "tailwindcss/utilities" reference; 
-
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  /* Style untuk <body> sudah dipindahkan ke index.html */
+  
+  /* Style global untuk <body> dikembalikan ke sini */
+  body {
+    @apply bg-slate-950 text-gray-100 font-body;
+  }
 }
 
 @layer utilities {
-  /* Sekarang @apply di bawah ini akan berfungsi 
-    karena ada @import referensi di atas
-  */
+  /* Definisi font kustom dikembalikan */
+  .font-heading {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Class .glass Anda, tanpa perlu @reference */
   .glass {
     @apply bg-slate-900/70 backdrop-blur-md border border-slate-800/50;
   }
