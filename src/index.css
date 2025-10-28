@@ -3,25 +3,33 @@
 @tailwind utilities;
 
 @layer base {
+  /* Aturan ini tidak menggunakan @apply, jadi biarkan apa adanya */
   html {
     scroll-behavior: smooth;
   }
   
-  body {
-    @apply bg-slate-950 text-gray-100 font-body;
+  /* Bungkus aturan ini dengan '@reference base' karena
+    Anda menggunakan @apply untuk utilitas dari 'base' 
+  */
+  @reference base {
+    body {
+      @apply bg-slate-950 text-gray-100 font-body;
+    }
   }
 }
 
 @layer utilities {
-  .font-heading {
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .font-body {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .glass {
-    @apply bg-slate-900/70 backdrop-blur-md border border-slate-800/50;
+  /* Hapus definisi .font-heading dan .font-body dari sini.
+    Anda sudah mendefinisikannya dengan benar di tailwind.config.js,
+    sehingga menyebabkannya redundan dan berpotensi menimbulkan konflik.
+  */
+
+  /* Bungkus .glass dengan '@reference utilities' karena
+    Anda menggunakan @apply untuk utilitas dari 'utilities'
+  */
+  @reference utilities {
+    .glass {
+      @apply bg-slate-900/70 backdrop-blur-md border border-slate-800/50;
+    }
   }
 }
