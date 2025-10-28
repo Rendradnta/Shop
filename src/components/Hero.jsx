@@ -21,7 +21,7 @@ const Hero = () => {
         >
           <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Layanan Hosting Terlengkap
-            <span className="block text-blue-500 mt-2">VPS • Bot Rental • Pterodactyl</span>
+            <span className="block text-blue-500 mt-2">Resa Store</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto">
