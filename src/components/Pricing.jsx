@@ -210,7 +210,7 @@ const Pricing = () => {
       alert('Link group harus berupa URL yang valid!')
       return
     }
-    const message = `.sewa ${botForm.linkGroup} ${botForm.maxMember}`
+    const message = `.sewa ${botForm.linkGroup} ${botForm.maxMember} ${botForm.durasi}`
     window.open(`https://wa.me/6285691421353?text=${encodeURIComponent(message)}`, '_blank')
   }
 
