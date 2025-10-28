@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TAMBAHKAN BARIS INI 
-  Ini adalah perbaikan untuk Tailwind v4.
-  Ini mengimpor semua utilitas sebagai "referensi",
-  sehingga @apply dapat menemukannya.
+/* V V V V V V V V V V V V V V V V V V V V V V V V V
+  KUNCI PERBAIKANNYA ADA DI BARIS DI BAWAH INI
+  V V V V V V V V V V V V V V V V V V V V V V V V V
 */
 @import "tailwindcss/utilities" reference; 
 
@@ -13,12 +12,12 @@
   html {
     scroll-behavior: smooth;
   }
-  /* 'body' styles sudah benar dipindahkan ke index.html */
+  /* Style untuk <body> sudah dipindahkan ke index.html */
 }
 
 @layer utilities {
-  /* Sekarang @apply di sini akan berhasil karena 
-    impor referensi di atas.
+  /* Sekarang @apply di bawah ini akan berfungsi 
+    karena ada @import referensi di atas
   */
   .glass {
     @apply bg-slate-900/70 backdrop-blur-md border border-slate-800/50;
