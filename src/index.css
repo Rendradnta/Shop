@@ -2,27 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TAMBAHKAN BARIS INI 
+  Ini adalah perbaikan untuk Tailwind v4.
+  Ini mengimpor semua utilitas sebagai "referensi",
+  sehingga @apply dapat menemukannya.
+*/
+@import "tailwindcss/utilities" reference; 
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  /* Aturan 'body' dihapus dari sini.
-    Aturan tersebut sekarang ada di index.html.
-    Ini memperbaiki error 'bg-slate-950'.
-  */
+  /* 'body' styles sudah benar dipindahkan ke index.html */
 }
 
 @layer utilities {
-  /* Aturan '.font-heading' dan '.font-body' dihapus.
-    Aturan tersebut sudah ditangani oleh tailwind.config.js.
+  /* Sekarang @apply di sini akan berhasil karena 
+    impor referensi di atas.
   */
-
-  /* Gunakan '@reference utilities' seperti yang disarankan log error
-    agar @apply dapat menggunakan utility lain (seperti backdrop-blur, dll.)
-  */
-  @reference utilities {
-    .glass {
-      @apply bg-slate-900/70 backdrop-blur-md border border-slate-800/50;
-    }
+  .glass {
+    @apply bg-slate-900/70 backdrop-blur-md border border-slate-800/50;
   }
 }
