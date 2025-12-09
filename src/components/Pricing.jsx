@@ -94,8 +94,8 @@ const Pricing = () => {
         core: '2 Core 2.5Ghz',
         ram: '4GB',
         storage: '25GB',
-        originalPrice: 20000,
-        price: 10000,
+        originalPrice: 40000,
+        price: 20000,
         promo: true,
         features: [
           '2 Core CPU @ 2.5GHz',
@@ -113,8 +113,8 @@ const Pricing = () => {
         core: '4 Core',
         ram: '4GB',
         storage: '25GB',
-        originalPrice: 35000,
-        price: 20000,
+        originalPrice: 60000,
+        price: 40000,
         promo: true,
         features: [
           '4 Core CPU',
@@ -134,7 +134,7 @@ const Pricing = () => {
         core: '4 Core',
         ram: '8GB',
         storage: '100GB',
-        price: 40000,
+        price: 100000,
         features: [
           '4 Core CPU',
           '8GB RAM DDR4',
@@ -151,7 +151,7 @@ const Pricing = () => {
         core: '8 Core',
         ram: '16GB',
         storage: '100GB',
-        price: 45000,
+        price: 150000,
         popular: true,
         features: [
           '8 Core CPU',
@@ -171,7 +171,7 @@ const Pricing = () => {
         core: '16 Core',
         ram: '32GB',
         storage: '250GB',
-        price: 70000,
+        price: 200000,
         features: [
           '16 Core CPU',
           '32GB RAM DDR4',
